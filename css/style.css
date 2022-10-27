@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--dark-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope';
+}
+.container {
+    width: 350px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.desktop {
+    display: none;
+}
+.card {
+    background-color: var(--dark-grayish-blue);
+    border-radius: 0.5rem;
+    height: 310px;
+    padding: 2.5rem 1rem;
+    box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.1);
+}
+.adviceId {
+    color: var(--neon-green);
+    letter-spacing: 3px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.advice {
+    color: var(--light-cyan);
+    font-size: 22px;
+    height: 135px;
+    margin: 1rem 0;
+}
+.mobile {
+    margin-top: 1rem;
+}
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -10%;
+    border: none;
+    cursor: pointer;
+}
+#btn:hover {
+    box-shadow: 1px 1px 20px 5px var(--neon-green);
+}
+/* CREDITS */
+.attribution {
+    text-align: center;
+    font-size: 13px;
+    color: var(--light-cyan);
+}   
+.attribution a {
+    text-decoration: none;
+    color: var(--neon-green);
+}
+.attribution a:hover {
+    color: var(--dark-grayish-blue);
+}
+/* CREDITS */
+@media screen and (min-width:900px) {
+    .container {
+        width: 500px;
+    }
+    .card {
+        padding: 2.5rem 0rem;
+    }
+    .advice {
+        height: 90px;
+        font-size: 24px;
+        margin: 2.8rem 2rem;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: inline-block;
+        width: 80%;
+    }
+    .attribution {
+        font-size: 15px;
+    }   
+}
